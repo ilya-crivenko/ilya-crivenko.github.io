@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таблица умножения</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Тренировка таблицы умножения</h1>
+  <div class="grid">
+    <!-- Кнопки выбора цифр -->
+    <button class="number-btn" onclick="startGame(1)">1</button>
+    <button class="number-btn" onclick="startGame(2)">2</button>
+    <button class="number-btn" onclick="startGame(3)">3</button>
+    <button class="number-btn" onclick="startGame(4)">4</button>
+    <button class="number-btn" onclick="startGame(5)">5</button>
+    <button class="number-btn" onclick="startGame(6)">6</button>
+    <button class="number-btn" onclick="startGame(7)">7</button>
+    <button class="number-btn" onclick="startGame(8)">8</button>
+    <button class="number-btn" onclick="startGame(9)">9</button>
+  </div>
+
+  <div id="game" class="game hidden">
+    <h2 id="question"></h2>
+    <input type="number" id="answer" placeholder="Ваш ответ">
+    <button onclick="checkAnswer()">Проверить</button>
+    <p id="feedback"></p>
+    <div class="progress-container">
+      <progress id="progressBar" value="0" max="10"></progress>
+    </div>
+    <p id="timer">Осталось времени: <span id="time">30</span> сек.</p>
+  </div>
+
+  <audio id="correctSound" src="correct.mp3"></audio>
+  <audio id="wrongSound" src="wrong.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
